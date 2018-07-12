@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zxpDrop.css"/>
+	</head>
+	<body>
+		<div class="containter">
+			<div class="main">
+				<div class="drop-wrap">
+					<div class="drop-scroll">
+						
+					</div>
+					<p class="circle" style="height: 30px;font: 1rem/2 '微软雅黑';">我是转圈圈^_^</p>
+					<p class="last">已经到最后了！</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/zxpDrop.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		var size = 17;
+		$.ajax({//获取json数据必写哦！！！
+				type:"get",
+				url:"http://api.x5u.com.cn:12804/School/CommonInterface.aspx?RegionName=0&action=Related_get1&dataindex=1&datasize="+size+"&operation=6&universityid=28f95547-16f0-49eb-aace-d8a42e1f94fa",
+				dataType:"json",
+				success:function(data){//consol一下是很重要的！！！！！！
+					//假如一页获取m条
+//					console.log(data.result.tuijian);
+//					$startNum = startNum;
+//					$endNum = endNum;
+					function goods (startNum,endNum) {
+						for(var i=startNum;i<endNum;i++){//加载json里面的图片，json里面数是从零开始的
+							 var html= "<ol class=\"main-list-ol\" goodNum = \""+data.result.tuijian[i].GoodsNum+"\" goodsId=\""+data.result.tuijian[i].GoodsID+"\" repertoryId = \""+data.result.tuijian[i].RepertoryID+"\">";
+								 html+="<li class=\"main-list-ol-li1\"><img src=\"http://api.x5u.com.cn:12804"+data.result.tuijian[i].Img1+"\"/><span class=\"home-ol-sell-out\">售罄</span></li>";
+								 html+="<li class=\"main-list-ol-li2\"><p>"+data.result.tuijian[i].GoodsName+"</p><p>¥"+data.result.tuijian[i].SalePrice+"</p></li>";
+								 html+="<li><i class=\"iconfont icon-gouwuche3 buy-car-icon\"></i></li></ol>";
+								$(".drop-scroll").append(html);//通过不断地加载，但是点击之后ul又会清空来实现分页的效果
+//								$(".circle").hide();
+						}
+					}
+					var num = 5;
+					goods (0,num);
+					var startNum = num;
+					var endNum = num+num;
+//					console.log(startNum,endNum);
+					//下拉加载
+						$(document).ready(function() { //这句话是要用的
+							var oWrap = $(".drop-wrap");
+							oWrap.scroll(function() { //只要不是钟表都不用计时器，滚动条监听有这个专门的方法，要配合ready来用。
+								//console.log(oWrap.height());
+								//console.log($(this).scrollTop());
+								//console.log($(".drop-scroll").height());
+								//console.log("1");
+								if(oWrap.height() + $(this).scrollTop() >= $(".drop-scroll").height()+30) {
+										setTimeout(function () {
+											if (startNum<size&&endNum<=size) {
+													//$(".circle").show();
+													goods (startNum,endNum);
+													startNum+=num;
+													endNum+=num;
+//													console.log(startNum);
+//													console.log(endNum);
+											}else if (startNum<=size&&endNum>=size) {
+//													console.log(startNum);
+//													console.log(endNum);
+													goods (startNum,size);
+													$(".circle").hide();
+													$(".last").show();
+											}
+											else {
+//												console.log("已经到最后了");
+												$(".circle").hide();
+												$(".last").show();
+											}
+										},1000);
+								}
+							}); //E scroll
+						}); //E ready
+				}//success
+		});//ajax
+//		console.log($(".drop-wrap").height());
+//		console.log($(".drop-scroll").height());
+//		console.log($(".drop-scroll").scrollTop());
+</script>
+
+
+
+
+<!--
+	做一个大项目要分块，量化，布局
+-->

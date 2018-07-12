@@ -1,0 +1,82 @@
+html,body,.containter,.main{
+	width: 100%;
+	height: 100%;
+}
+.drop-wrap{
+	width: 100%;
+	height: 84%;
+	background-color: #fff;
+	overflow: scroll;
+	position: relative;
+}
+.guess-you-like{
+	margin-top: 0.5rem;
+}
+.drop-scroll{
+	height: auto;
+}
+.guess-you-like-p{
+	padding: 1rem 0rem;
+	width: 100%;
+	height:1.5rem;
+	background-color: #fff;
+	border-bottom:0.01rem solid #ccc ;	
+}
+.main-list-ol-li1{
+	height: 4rem;
+	position: relative;
+	/*overflow: hidden;*/
+}
+.main-list-ol-li1>img{
+	height: 100%;
+}
+.guess-you-like-span{
+	display: inline-block;
+	margin-left: 1rem;
+	font: 1rem/1.5 "微软雅黑";
+}
+.main-list-ol{
+	width: 96%;
+	padding: 1.5rem 2%;
+	height: 4rem;
+	background-color: #fff;
+	border-bottom:1px solid #ccc ;	
+	position: relative;
+	overflow: hidden;
+}
+.main-list-ol>li{
+	float: left;
+}
+.main-list-ol>li:nth-child(1){
+	margin-top: 0.7rem;
+}
+.main-list-ol>li:nth-child(2){
+	float: left;
+	width: 65%;
+	margin-left: 1rem;
+}
+.main-list-ol>li:nth-child(3){
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+}
+.main-list-ol-li2{
+	height: 100%;
+}
+.main-list-ol>li>p{
+	font: 1rem/1.2 "微软雅黑";
+}
+.main-list-ol>li>p:nth-child(2){
+	color: red;
+	margin-top: 0.8rem;
+}
+
+.circle{
+	text-align: center;
+}
+.last{
+	display: none;
+	height: 20px;
+	text-align: center;
+	
+}
