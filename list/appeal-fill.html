@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <title>加班申诉</title>
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <meta name="author" content="zxp-20180711">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http‐equiv="X‐UA‐Compatible" content="IE=Edge">
+	    <link rel="icon" href="picture.ico" type="image/x-icon"/>
+	    <link rel="stylesheet" type="text/css" href="css/base.css">
+	    <link rel="stylesheet" type="text/css" href="css/DateSelector.css"/>
+	    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="containter">
+				<div id="targetContainer"></div>
+				<div id="targetContainer1"></div>
+				<div class="lists-top">
+					<p class="list-top-p list-top-p1"><i class="iconfont icon-xiaoyuhao"></i>返回</p>
+					<p class="list-top-p list-top-p2">加班申诉</p>
+					<p class="list-top-p list-top-p3"><i class="iconfont icon-liebiao1 list-icon-liebiao1"></i></p>
+				</div>
+				<ul class="appeal-fill-ul">
+					<li class="appeal-fill-li"><p><img src="img/list_05.png" class="flower-pic"/>开始时间</p><p><input type="text" name="" id="date-selector-input" value="" class="fill-input fill-input1" disabled readonly/><i class="iconfont icon-dayuhao-copy"></i></p> </li>
+					<li class="appeal-fill-li"><p><img src="img/list_05.png" class="flower-pic"/>结束时间</p><p><input type="text" name="" id="date-selector-input1" value="" class="fill-input fill-input2" disabled readonly/><i class="iconfont icon-dayuhao-copy"></i></p></li>
+					<li class="appeal-fill-li"><p>&nbsp;&nbsp;&nbsp;时长(h)</p>	<p><input type="text" placeholder="请输入时长" class="fill-input" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"/></p></li>
+				</ul>
+				<div class="fill-reason">
+					<p class="flex-mid"><img src="img/list_05.png" class="flower-pic"/>申诉理由</p>
+					<textarea name="" rows="" cols="" placeholder="请输入申诉理由" class="fill-reason-textarea"></textarea>
+				</div>
+				<div class="fill-approver">
+					<p>审批人</p>
+					<ul class="fill-approver-ul">
+						<li class="fill-approver-li">
+							<p class="fill-blue-circle-pic"></p>
+							<p>部门领导</p>
+						</li>
+						<!--<li class="fill-approver-li">
+							<p class="fill-blue-circle-pic"></p>
+							<p>部门领导</p>
+						</li>-->
+					</ul>
+				</div>
+				<input type="button" name="" id="" value="提交" class="fill-submit flex-mid-center"/>
+		</div><!--E containter--> 
+	</body>
+</html>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/DateSelector.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var myDate = new Date;
+    var year = myDate.getFullYear();//获取当前年
+    var yue = myDate.getMonth()+1;//获取当前月
+    var date = myDate.getDate();//获取当前日
+    var h = myDate.getHours();//获取当前小时数(0-23)
+    var m = myDate.getMinutes();//获取当前分钟数(0-59)
+    var s = myDate.getSeconds();//获取当前秒
+	new DateSelector({ 
+    	 input: 'date-selector-input',//点击触发插件的input框的id
+		    container: 'targetContainer',//插件插入的容器id
+		    type: 1,
+		    //0：不需要tab切换，自定义滑动内容，建议小于三个；
+		    //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+		    param: [1, 1, 1, 1, 1],
+		    //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+		    beginTime: [2017, 1, 1, 1, 1],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+		    endTime: [2027, 1, 7, 12, 2],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+		    recentTime: [year, yue, date, 2, 2],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+		    success: function (arr, arr2) {
+//		      alert('打开控制台查看结果');
+//		      console.log(arr, '--- 数字结果');
+//		      console.log(arr2, '--- 字符串结果');
+//		      var $placeArray = arr;
+				$(".fill-input1").val(arr[0]+"-"+arr[1]+"-"+arr[2]);
+		    }//回调
+    });
+    new DateSelector({ 
+    	 input: 'date-selector-input1',//点击触发插件的input框的id
+		    container: 'targetContainer1',//插件插入的容器id
+		    type: 1,
+		    //0：不需要tab切换，自定义滑动内容，建议小于三个；
+		    //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+		    param: [1, 1, 1, 1, 1],
+		    //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+		    beginTime: [2017, 1, 1, 1, 1],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+		    endTime: [2027, 1, 7, 12, 2],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+		    recentTime: [year, yue, date, 2, 2],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+		    success: function (arr, arr2) {
+//		      alert('打开控制台查看结果');
+//		      console.log(arr, '--- 数字结果');
+//		      console.log(arr2, '--- 字符串结果');
+//		      var $placeArray = arr;
+				$(".fill-input2").val(arr[0]+"-"+arr[1]+"-"+arr[2]);
+		    }//回调
+    });
+</script>

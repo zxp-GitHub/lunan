@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <title>加班申请</title>
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <meta name="author" content="zxp-20180711">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http‐equiv="X‐UA‐Compatible" content="IE=Edge">
+	    <link rel="icon" href="picture.ico" type="image/x-icon"/>
+	    <link rel="stylesheet" type="text/css" href="css/base.css">
+	    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="containter">
+				<div class="list-top">
+					<p class="list-top-p list-top-p1"><i class="iconfont icon-xiaoyuhao"></i>返回</p>
+					<p class="list-top-p list-top-p2">加班申请</p>
+					<p class="list-top-p list-top-p3"><i class="iconfont icon-liebiao1 list-icon-liebiao1"></i></p>
+				</div>
+				<div class="apply-cell overtime-apply-cell">
+					<div class="overtime-apply-cell-top">
+						<p>赵正正</p>
+						<p>日程加班申请</p>
+					</div>
+					<div class="apply-top-cell  flex">
+						<ul class="apply-cell-ul">
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>加班时间： <span>2018-07-15</span></li>
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>加班时长： <span>1.0</span>天</li>
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>加班原因： <span>考试</span></li>
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>加班状态： <span class="red">无效加班</span></li>
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>无效原因： <span class="red">未出勤</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="apply-cell overtime-apply-cell" style="margin-top: 1rem;">
+					<div class="overtime-apply-cell-top">
+						<p style="font-size: 1rem;" class="blues">申诉</p>
+						<img src="img/list_04.png" class="overtime-approval-pending-pic"/>
+					</div>
+					<div class="apply-top-cell  flex">
+						<ul class="apply-cell-ul">
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>加班时间： <span>2018-07-15</span></li>
+							<li class="apply-cell-li" style="position: relative;">
+								<img src="img/list_01.png" class="blue-circle-pic"/>加班时长： 
+								<span class="styled-select">
+									<span class="choosed">1.0天</span>
+									<i class="iconfont icon-arrowd red-arror"></i>
+									
+								</span>
+								<div class="option-cell">
+										<p>1.0天</p>
+										<p>2.0天</p>
+										<p>3.0天</p>
+										<p>4.0天</p>
+									</div>
+								 <!--<select>
+							        <option>Here is the first option</option>
+							        <option>The second option</option>
+							    </select>-->
+							</li>
+							<li class="apply-cell-li"><img src="img/list_01.png" class="blue-circle-pic"/>申诉理由： <span>已加班</span></li>
+						</ul>
+					</div>
+				</div>
+		</div><!--E containter--> 
+	</body>
+</html>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(".styled-select").click(function () {
+		$(".option-cell").show();
+	});
+	$(".option-cell p").click(function () {
+		$(".choosed").html($(this).html());
+		$(".option-cell").hide();
+	})
+	
+	
+</script>

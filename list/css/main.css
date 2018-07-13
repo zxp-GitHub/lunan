@@ -1,0 +1,395 @@
+/***
+ @description: 我发起的-申诉列表
+ @author: 张秀平
+ @datetime: 2018-07-10
+
+***/
+
+/*S list*/
+html,body,.containter{
+	width: 100%;
+	height: 100%;
+}
+.containter{
+	width: 100%;
+	height: 100%;
+	background: rgb(242,248,255);
+	font-family: "微软雅黑";
+	position: relative;
+}
+.lists-top{
+	width: 100%;
+	height: 2.3rem;
+	background: linear-gradient(to right,rgb(66,131,236), rgb(6,188,253));
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	color: #fff;
+	font: 1rem/1 "微软雅黑";
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.list-top{
+	width: 100%;
+	height: 2.3rem;
+	background: linear-gradient(to right,rgb(66,131,236), rgb(6,188,253));
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	color: #fff;
+	font: 1rem/1 "微软雅黑";
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.list-top-p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.list-top-p1{
+	flex: 2;
+}
+.list-top-p2{
+	flex: 6;
+}
+.list-top-p3{
+	flex: 2;
+}
+.list-icon-liebiao1{
+	font-size: 1.2rem;
+}
+.search-div{
+	width: 100%;
+	height: 3rem;
+	background-color: #fff;
+	font-size: 1.1rem;
+	position: fixed;
+	left: 0;
+	top: 2.3rem;
+	z-index: 999;
+}
+.search-div>a>i{
+	font-size: 1.1rem;
+	margin-right: 0.3rem;
+}
+.list-main{
+	width: 90%;
+	margin-top: 5.3rem;
+	padding: 0 5%;
+	padding-top: 0.1rem;
+	background-color: rgb(241,246,250);
+	overflow: scroll; /*这句不写，底部会留白*/
+}
+.apply-cell{
+	/*height: 8rem;*/
+	width: 100%;
+	background-color: #fff;
+	margin-top: 1rem;
+	/*padding: 2% 3% 2% 5%;*/
+	position: relative;
+	border-radius: 3px;
+	margin-bottom: 1rem;
+	position: relative;
+}
+.apply-top-cell{
+	width: 92%;
+	padding: 2% 3% 2% 5%;
+}
+.apply-cell-left-pic{
+	position: absolute;
+	left: 0;
+	top: 0.3rem;
+	height: 2.3rem;
+}
+.apply-cell-ul{
+	width: 80%;
+	color: #777;
+}
+.apply-cell-li1{
+	color: #000;
+}
+.apply-cell-li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+.apply-cell-right-pic{
+	height: 1rem;
+	margin-top: 0.5rem;
+}
+.li-circle{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background-color: #ccc;
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+.blue-circle-pic{
+	width: 0.5rem;
+	margin-right: 0.3rem;
+}
+.apply-a{
+	width: 100%;
+	/*position: absolute;
+	bottom: 0;
+	left: 0;*/
+	height: 2.5rem;
+	background-color: rgb(68,129,253);
+	color: #fff;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+}
+/*E list*/
+/*S appeal*/
+.overtime-apply-cell{
+	margin-top: 0rem;
+}
+.overtime-apply-cell-top{
+	width: 90%;
+	margin: 0rem 5%;
+	padding: 1.5rem 0 0.5rem;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+}
+.overtime-apply-cell-top>p:first-child{
+	font-size: 1.1rem;
+}
+.overtime-apply-cell-top>p:last-child{
+	color: rgb(66,131,236);
+}
+.apply-cell-right-pic2{
+	height: 5rem;
+	margin-top: 2rem;
+}
+.overtime-apply-a{
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	color: rgb(66,131,236);
+}
+.leader-through{
+	display: flex;
+	background-color: #fff;
+	width: 90%;
+	padding: 1rem 5%;
+	
+}
+.leader-through-left-pic{
+	/*height: 6rem;*/
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.blue-three-circle{
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: rgb(4,190,254);
+}
+.blue-string{
+	height: 0.8rem;
+	width: 1px;
+	background-color: #ccc;
+	text-align: center;
+}
+.leader-through-ul{
+	width: 90%;
+}
+.leader-through-li{
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+	/*line-height: 2rem;*/
+}
+.leader-through-li2{
+	height: 2.9rem;
+	/*margin-top: 0.4rem;*/
+}
+.leader-through-li3{
+	height: 1.6rem;
+}
+.agree-span{
+	margin-left: 0.5rem;
+}
+.overtime-right-time{
+	position: absolute;
+	right: 0;
+}
+.overtime-approval-pending-pic{
+	height: 1rem;
+	margin-bottom: 0.2rem;
+}
+/*E appeal*/
+/*S appeal-fill*/
+.fill-blue-circle-pic{
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	background-color: rgb(4,190,254);
+	margin-bottom: 0.3rem;
+}
+.appeal-fill-ul{
+	width: 90%;
+	background-color: #fff;
+	padding:0 5%;
+	font-size: 1rem;
+	margin-top: 2.3rem;
+}
+.appeal-fill-li{
+	height: 3rem;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.appeal-fill-li>p{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.appeal-fill-li:last-child{
+	height: 3rem;
+	border-bottom: none;
+}
+.flower-pic{
+	width: 0.5rem;
+	margin-right: 0.3rem;
+}
+.fill-input{
+	text-align: right;
+	height: 2rem;
+	font-size: 1rem;
+}
+.fill-reason{
+	width: 90%;
+	padding: 5%;
+	background-color: #fff;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+.fill-reason-textarea{
+	width: 90%;
+	height: 2.6rem;
+	margin-top: 1rem;
+	padding-left: 1rem;
+}
+.fill-approver{
+	width: 90%;
+	padding: 5%;
+	background-color: #fff;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+.fill-approver-ul{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 1rem;
+}
+.fill-approver-li{
+	width: 33.330%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fill-submit{
+	width: 80%;
+	height: 2rem;
+	background: linear-gradient(to right,rgb(66,131,236), rgb(6,188,253));
+	border-radius: 1rem;
+	margin: 0 auto;
+	margin-top: 5rem;
+	color: #fff;
+	font: 1rem/1 "微软雅黑";
+}
+.date-selector-btn-box, .date-selector-tab-box .date-selector-tab-active{
+		background-color: rgb(4,190,254);
+}
+.date-selector-tab-box .date-selector-tab:nth-child(2){
+	display: none;
+}
+.date-selector-tab-box .date-selector-tab:first-child {
+    border-right: none;
+    /*border-radius: 19px;*/
+}
+.date-selector-tab-box{
+	/*border-radius: 19px;*/
+}
+/*E appeal-fill*/
+
+.styled-select{
+	border: 1px solid red;
+	border-radius: 3px;
+	padding: 0.1rem 0.4rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+	/*background-color: red;*/
+}
+.option-cell{
+	position: absolute;
+	width: 4rem;
+	top: 1.8rem;
+	left: 4.5rem;
+	text-align: center;
+	border: 1px solid red;
+	border-radius: 3px;
+	display: none;
+}
+.option-cell > p{
+	height: 1.5rem;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+/*.option-cell > p:hover{
+	background-color: skyblue;
+}*/
+/*移动端没有划过*/
+.red-arror{
+	display: inline-block;
+	margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    color: red;
+}
+/*S common*/
+.blues{
+	color: rgb(66,131,236);
+}
+.flex{
+	display: flex;
+}
+.flex-mid-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-mid{
+	display: flex;
+	align-items: center;
+}
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+.flex-around{
+	display: flex;
+	align-items: center;
+	justify-content: space-around ;
+}
+.fixd{
+	display: flex;
+	left: 0;
+	top: 0;
+}
+/*E common*/
