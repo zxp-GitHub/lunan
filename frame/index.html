@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		    <meta name="keywords" content="">
+		    <meta name="description" content="">
+		    <meta name="author" content="zxp-20180824">
+		    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    	<meta http‐equiv="X‐UA‐Compatible" content="IE=Edge">
+		    <link rel="icon" href="picture.ico" type="image/x-icon"/>
+		    <link rel="stylesheet" type="text/css" href="css/base.css">
+		    <link rel="stylesheet" type="text/css" href="css/public.css"/>
+		    <!--<link rel="stylesheet" type="text/css" href="css/main.css"/>-->
+		    <!--<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>-->
+		    <title>张张的框架</title>
+		    <script >
+				var width = document.documentElement.clientWidth;
+				document.documentElement.style.fontSize = width/7.5 + 'px';
+			</script>
+	</head>
+	<body>
+		<div class="containter">
+			<p class="magb-10 magt-30" style="margin-top: 1.2rem;">input样式</p>
+			<input type="text"  class="input-radius register-username" placeholder="用户名/邮箱/手机号"/>
+			<p class="magb-10 magt-10">发送验证码</p>
+			<div class="copy-input mag-auto">
+						<input type="" name="" id="" value="" class="inner-input register-phone" placeholder="手机号"/>
+						<span class="copy-string"></span>
+						<button class="send-confirm-code">发送验证码</button>
+			</div>
+			<p class="magb-10 magt-10">控制ul</p>
+			<ul class="ctr-ul mag-auto">
+				<li><a href="#">账号登录</a></li>
+				<li>注册账号</li>
+			</ul>
+			<!--top的三个li长度固定，不会因长度变化而相互挤压-->
+			<ul class="top">
+				<li><span>top</span></li>
+				<li><span>2</span></li>
+				<li><span>三个元素的长度固定</span></li>
+			</ul>
+			<p class="magb-10 magt-10">验证码</p>
+			<div class="copy-input copy-inner-pic-input mag-auto">
+				<input type="" name="" id="" value="" class="inner-input" placeholder="验证码">
+				<img src="img/jkzc4_03.png" class="inner-confirm-pic">
+			</div>
+			<p class="magb-10 magt-10">同意协议</p>
+			<div class="agree-protocol-div">
+				<input type="checkbox" name="" id="" value="" class="checkbox">
+				<img src="img/jkzc6_03.png" class="agree-protocol-pic">
+				<a href="#" class="agree-protocol-a">同意《健康之初用户服务协议》</a>
+			</div>
+			<p class="magb-10 magt-10">提交按钮</p>
+			<input type="submit" name="" id="" value="注册" class="submit-button">
+			<p class="magb-10 magt-10">select自定义箭头</p>
+			<select class="select mag-auto" style="margin-bottom: 2.2rem;">
+				<option value="">1</option>
+				<option value="">2</option>
+				<option value="">3</option>
+			</select>
+			<div class="flex forget-pass-cell mag-auto">
+				<a href="#">忘记密码?</a>
+				<a href="register.html">注册</a>
+			</div>
+			<p class="magb-10 magt-10">change-ul</p>
+			<ul class="change-ul">
+				<li>
+					<p class="change-ul-p1">为什么小时候的美味如今没味了？</p>
+					<p class="change-ul-p2">
+						<span class="change-ul-span2">
+							<a href="" class="change-ul-left-a change-ul-left-a1">
+								<img src="img/jkzc7_13.png" class="change-ul-icon" style="margin-top: -6px;"> 
+							</a>
+							<span class="change-ul-time-span">2018-01-01</span>
+							<a href="" class="change-ul-left-a">
+								<img src=" img/jkzc7_15.png" class="change-ul-icon" style="margin-top: -2px;">
+							</a>
+							<span>内容不实</span>
+						</span>
+						<span class="change-ul-span2">
+							<a href=""> <img src="img/jkzc7_17.png" class="change-ul-icon"> </a>
+							<a href=""><img src="img/jkzc7_19.png" class="change-ul-icon"></a>
+							<a href=""><img src="img/jkzc7_21.png" class="change-ul-icon"></a>
+						</span>
+					</p>
+				</li>
+				<li>
+					<p class="change-ul-p1">为什么小时候的美味如今没味了？</p>
+					<p class="change-ul-p2">
+						<span class="change-ul-span2">
+							<a href="" class="change-ul-left-a change-ul-left-a1">
+								<img src="img/jkzc7_13.png" class="change-ul-icon" style="margin-top: -6px;"> 
+							</a>
+							<span class="change-ul-time-span">2018-01-01</span>
+							<a href="" class="change-ul-left-a">
+								<img src=" img/jkzc7_15.png" class="change-ul-icon" style="margin-top: -2px;">
+							</a>
+							<span>内容不实</span>
+						</span>
+						<span class="change-ul-span2">
+							<a href=""> <img src="img/jkzc7_17.png" class="change-ul-icon"> </a>
+							<a href=""><img src="img/jkzc7_19.png" class="change-ul-icon"></a>
+							<a href=""><img src="img/jkzc7_21.png" class="change-ul-icon"></a>
+						</span>
+					</p>
+				</li>
+			</ul>
+			<p class="magb-10 magt-10">button</p>
+			<button class="button mag-auto">发表文章</button>
+			
+		</div>
+		
+	</body>
+</html>
+<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//点击事件为表单可以提交的事件checkBox
+	$(".agree-protocol-pic").click(function () {
+		if ($(".checkbox").attr("checked")) {
+			$(".checkbox").removeAttr("checked");
+			$(".agree-protocol-pic").attr("src","img/jkzc6_03.png");
+		}else{
+			$(".checkbox").attr("checked","checked");
+			$(".agree-protocol-pic").attr("src","img/jkzc5_07.png");
+		}
+	});
+</script>
