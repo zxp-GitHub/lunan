@@ -280,4 +280,164 @@ html,body,.containter{
 	font: 14px/1 "微软雅黑";
 }
 /*E button*/
+/*S 更多*/
+.blue-square{
+	width: 3px;
+	height: 15px;
+	display: inline-block;
+	background-color: rgb(63,81,181);
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.member-ul{
+	width: 100%;
+	border-top: 8px solid #E5E5E5;
+	margin-top: 3px;
+}
+.member-ul > li{
+	width: 90%;
+	padding:3% 5%;
+	border-top: 1px solid #E5E5E5;
+}
+.member-li1{
+	display: flex;
+	-webkit-justify-content: space-between;
+	font: 17px/1 "微软雅黑";
+	align-items: center;
+}
+.member-li1 > p:nth-child(1){
+	margin-top: -2px;
+}
+.more-a1{
+	color: #666;
+}
+.li-last{
+	text-align: center;
+}
+.li-last-a{
+	color: rgb(63,81,181);
+	font-size: 20px;
+}
+.member-ul > li >p{
+	margin-top: 8px;
+	font: 16px/1 "微软雅黑";
+	/*width: 100%;*/
+}
+.member-more-p{
+	width:90%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.member-ul > li >p:last-child{
+	color: #999;
+}
+.li1-num-span{
+	color: rgb(34,24,21);
+	font-weight: 600;
+}
+.member-ul > li:last-child{
+	border-top: none;
+}
+/*E 更多*/
+/*S 通知*/
+.member-ul {
+    width: 100%;
+    border-top: 8px solid #E5E5E5;
+    margin-top: 3px;
+}
+.member-ul > li {
+    width: 90%;
+    padding: 3% 5%;
+    border-top: 1px solid #E5E5E5;
+}
+.message-center-ul > li{
+	display: flex;
+	justify-content: space-between;
+}
 
+.member-ul > li >p {
+    margin-top: 8px;
+    font: 16px/1 "微软雅黑";
+}
+.message-center-ul > li >p:nth-child(1){
+	width: 68%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.message-center-ul > li >p:last-child{
+	width: auto;
+}
+.member-ul > li >p:last-child {
+    color: #999;
+}
+.li-last-a{
+	color: rgb(63,81,181);
+	font-size: 20px;
+}
+.message-center-last-li > a{
+	margin: 0 auto;
+}
+/*E 通知*/
+/*S 昵称头像更改*/
+.nickname-cell{
+	width: 84%;
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 0.5rem;
+	margin:  0 auto;
+}
+.nickname-cell-left{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: -30px;
+}
+.head-portrait{
+	width: 50px;
+	height: 50px;
+}
+.nickname-cell-right{
+	margin-left: 40px;
+	font: 16px/1 "微软雅黑";
+}
+.grade{
+	border-radius: 4px;
+	padding: 1px 5px;
+	background-color: rgb(255,156,0);
+	color: #fff;
+	font: 8px/1 "微软雅黑";
+}
+.cell-right-p2{
+	font: 13px/1 "微软雅黑";
+	color: #666;
+}
+.cell-right-p{
+	margin-bottom: 13px;
+}
+.ask,.answer{
+	padding: 1px 3px;
+	background-color: rgb(255,156,0);
+	color: #fff;
+	font: 13px/1 "微软雅黑";
+}
+.answer{
+	background-color: rgb(238,44,66);
+}
+.member-ctr-div{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	font: 15px/1 "微软雅黑";
+	border-top: 1px solid #ccc;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.member-ctr-div > a > p:nth-child(2){
+	margin-top: 6px;
+}
+/*E 昵称头像更改*/
