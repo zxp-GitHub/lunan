@@ -1,0 +1,6 @@
+学渣也要搞 laravel（1）—— 安装篇
+https://www.cnblogs.com/qiutianjia/p/5617235.html
+【安装composer】
+1.点开安装包
+2.next-找到对应的php.exe-下面要填的不用填直接按next即可
+3.cmd-composer-enter

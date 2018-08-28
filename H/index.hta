@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html style="width: 100%;height:100%;">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<HTA:Application ID="oHTA" 
+		　　 Applicationname="myApp" 
+		　　 border="thin" 
+		　　 borderstyle="normal" 
+		　　 caption="yes" 
+		　　 icon="filename.ico" 
+		　　 maximizebutton="no" 
+		　　 minimizebutton="yes" 
+		　　 showintaskbar="no" 
+		　 　singleinstance="no" 
+		　 　sysmenu="yes" 
+		　 　version="1.0" 
+		　 　windowstate="normal" 
+		　 　scroll="yes">
+	</head>
+	<body style="width: 100%;height:100%;position: relative;">
+		<button onclick="aa()" style="width: 200px;margin: 0 auto;left:40%; right: 0;position: absolute;top: 30%;">现在测测你的颜值吧~</button>
+		<div class="" id="div1" style="display: none;color: red;font: 1rem/1 '微软雅黑';margin-left: 50px;width: 100%;padding-top: 30px;position: absolute;top: 40%;left:37%;">
+			你是一个有自知之明的狗子
+			<img src="all-goods-right-pic.png" id="pic"/>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+function aa() {
+		var truthBeTold = confirm("你是最美的小仙女吗？");
+		window.location.reload();
+		var mymessage2;
+		var mymessage3;
+		if (truthBeTold==true) {
+			mymessage2 = confirm("确定吗？");
+			if (mymessage2==true) {
+				for (var i = 5; i >=1; i--) {
+					alert("你在做梦醒来吧~第"+i+"重梦境");
+				}
+				var box = document.getElementById("div1")
+				box.style.display = "block";
+				box.style.display = "block";
+			} else{
+				alert("你是一个有自知之明的人~");
+			}
+		}else{
+			mymessage2 = confirm("不再挣扎一下吗？你是最美的小仙女吗？");
+			if (mymessage2==true) {
+				alert("哈哈哈，上当了~~");
+				for (var i = 5; i >=1; i--) {
+					alert("你在做梦醒来吧~第"+i+"重梦境");
+				}
+			} else{
+				alert("你是一个有自知之明的人~");
+				var box = document.getElementById("div1")
+				box.style.display = "block";
+
+				
+			}
+		}
+	}
+//$("button").click(function(){
+//	alert("颜值，美炸了");
+//})
+</script>

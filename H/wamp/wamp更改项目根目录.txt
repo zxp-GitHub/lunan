@@ -1,0 +1,10 @@
+1.Apache-httpd.conf-查找-documentRoot
+2.更改下面两条目录,两者一致，与cmd转义字符的斜线方向是相反的
+
+DocumentRoot "${INSTALL_DIR}/www"
+<Directory "${INSTALL_DIR}/www/">
+
+=》
+
+DocumentRoot "c:/my"
+<Directory "c:/my">

@@ -1,0 +1,13 @@
+c:
+	#include<stdio.h>     
+	printf("Hello, World!\n");
+c++:
+	#include <iostream>    
+	using namespace std;   
+	cout << "Max value is : " << ret << endl;
+c#:
+	using System;
+	Console.WriteLine("最大值是： {0}", ret );
+	Console.ReadLine();
+java:
+	System.out.println('B');

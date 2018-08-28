@@ -1,0 +1,19 @@
+1.谷歌显示特别小，到谷歌上就崩；
+=>移动端适配
+	<meta charset="utf-8" />
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="张秀平-20180530">
+  **<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http‐equiv="X‐UA‐Compatible" content="IE=Edge">
+2.华文新魏字体下载，使用
+	1.下载华为新魏字体
+	2.将华为新魏字体复制到目录：C:\Windows\Fonts
+	3.在文件夹下新建一个font文件夹，将华为新魏字体.ttf格式文件复制font文件夹
+	4.在css里添加上这句话
+		@font-face {
+		    font-family: 'HaWen XinWei';
+		    src: url('../font/STXINWEI.TTF');
+		}
+	5.字体使用的的方法：
+		font:400 1.2rem/1 "HaWen XinWei";
